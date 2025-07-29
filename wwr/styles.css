@@ -1,116 +1,257 @@
-/* CONTACT PAGE STYLES */
+/* rafting.css */
 
-/* Contact info layout */
-.contact-info {
-    margin: 2rem 0;
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.map-container {
-    margin-top: 1rem;
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 0;
 }
 
-.map-container iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
-    border-radius: 8px;
+h1,
+h2,
+h3 {
+  font-family: 'Lobster', cursive;
+  color: #005f73;
 }
 
-/* Team grid for employee profiles */
+header {
+  background-color: #0a9396;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  max-height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #94d2bd;
+  color: #001219;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(70%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.btn {
+  background-color: #ee9b00;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #ca6702;
+}
+
+.newsletter {
+  background-color: #e9d8a6;
+  padding: 2rem;
+  text-align: center;
+}
+
+.newsletter form {
+  margin-top: 1rem;
+}
+
+.newsletter input[type="email"] {
+  padding: 0.5rem;
+  width: 250px;
+  max-width: 80%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 0.5rem;
+}
+
+.newsletter button {
+  padding: 0.5rem 1rem;
+  background-color: #005f73;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quote {
+  background-color: #94d2bd;
+  padding: 2rem;
+  text-align: center;
+  font-style: italic;
+  color: #001219;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+.info-block {
+  background-color: #fefae0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #0a9396;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer .social a img {
+  height: 30px;
+  margin: 0 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+footer .social a img:hover {
+  transform: scale(1.1);
+}
+
+/* Contact Form & Team Section */
+.contact-info,
+.contact-form-section,
 .team {
-    margin: 2rem 0;
+  padding: 2rem;
+  background-color: #fff;
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea,
+.contact-form fieldset {
+  display: block;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background-color: #ee9b00;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .team-grid img {
-    width: 100%;
-    border-radius: 8px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-.team-grid figcaption {
-    text-align: center;
-    margin-top: 0.5rem;
-    font-size: 0.95rem;
+/* Trips Page */
+.trip-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
 }
 
-/* Contact form styles */
-.contact-form-section {
-    margin: 2rem 0;
+.trip {
+  background-color: #e9d8a6;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.contact-form {
-    display: grid;
-    gap: 1rem;
+.page-header {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fefae0;
 }
 
-.contact-form label {
-    font-weight: bold;
+/* Responsive Iframe Map */
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 8px;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid var(--accent1-color);
-    border-radius: 4px;
-    font-family: inherit;
+/* Utility Classes */
+ul {
+  padding: 0;
 }
 
-.contact-form fieldset {
-    border: 1px solid var(--accent1-color);
-    padding: 0.5rem;
-    border-radius: 4px;
-}
-
-.contact-form fieldset legend {
-    font-weight: bold;
-}
-
-.contact-form input[type="radio"],
-.contact-form input[type="checkbox"] {
-    margin-right: 0.5rem;
-}
-
-.btn-submit {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.btn-submit:hover {
-    background-color: var(--accent2-color);
-}
-
-.wireframe-section {
-    text-align: center;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    background-color: #f5f5f5;
-    border-top: 2px solid #ccc;
-    border-radius: 8px;
-    max-width: 900px;
-}
-
-.wireframe-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #333;
-}
-
-.wireframe-section img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ul li {
+  list-style: none;
 }

@@ -18,44 +18,64 @@
   <header>
     <img src="images/logo.png" alt="Whitewater Rafting Logo" class="logo">
     <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="trips.html">Trips</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
     <!-- Hero Section -->
-    <div class="hero">
+    <section class="hero">
       <img src="images/hero.jpg" alt="Rafting Adventure" class="hero-img">
-      <h1>Whitewater Rafting Adventures</h1>
-      <article>
+      <div class="hero-text">
+        <h1>Whitewater Rafting Adventures</h1>
         <h2>Your Next Adventure Awaits!</h2>
-        <p>Learn more about our company, our team, and what makes us special.</p>
-      </article>
-    </div>
-
-    <!-- Our Story -->
-    <section class="history">
-      <h2>Our Story</h2>
-      <p>Founded by passionate adventurers, Whitewater Rafting Adventures has been creating thrilling experiences for
-        over a decade. We love connecting people with nature and delivering safe, exciting trips down some of the most
-        beautiful rivers.</p>
+        <p>Explore wild rivers, stunning landscapes, and unforgettable experiences.</p>
+        <a href="trips.html" class="btn">View Trips</a>
+      </div>
     </section>
 
-    <!-- Meet Our Team -->
-    <section class="history">
-      <h2>Meet Our Team</h2>
-      <p>Our guides are certified professionals who live and breathe rafting. Their expertise and passion ensure that
-        every trip is unforgettable.</p>
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+      <h2>Subscribe to Our Newsletter</h2>
+      <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Subscribe</button>
+      </form>
     </section>
 
-    <!-- Trip Summaries -->
-    <section class="history">
-      <h2>Trip Summaries</h2>
-      <p>We offer beginner-friendly half-day floats, intense full-day rapids, and even multi-day camping and rafting
-        combos. There’s an adventure for everyone!</p>
+    <!-- Quote Section -->
+    <section class="quote">
+      <blockquote>
+        “Life is a journey, not a destination... We must finish strong.”<br>
+        <cite>– President Thomas S. Monson</cite>
+      </blockquote>
+    </section>
+
+    <!-- Story Section -->
+    <section class="info-grid">
+      <div class="info-block">
+        <h2>Our Story</h2>
+        <p>Founded by passionate adventurers, Whitewater Rafting Adventures has been creating thrilling experiences for
+          over a decade. We connect people with nature through safe and exciting trips down the most scenic rivers.</p>
+      </div>
+
+      <div class="info-block">
+        <h2>Meet Our Team</h2>
+        <p>Our certified guides are river experts who ensure every guest enjoys an unforgettable, safe, and thrilling
+          rafting adventure.</p>
+      </div>
+
+      <div class="info-block">
+        <h2>Trip Summaries</h2>
+        <p>We offer beginner floats, full-day rapids, and multi-day camping & rafting combos. There’s something for
+          everyone!</p>
+      </div>
     </section>
   </main>
 
