@@ -1,5 +1,3 @@
-/* rafting.css */
-
 /* Global Reset */
 * {
   margin: 0;
@@ -12,35 +10,46 @@ body {
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
-  padding: 0;
+  padding: 0 1rem;
 }
 
-h1,
-h2,
-h3 {
-  font-family: 'Lobster', cursive;
-  color: #005f73;
-}
-
+/* Header Grid Layout */
 header {
-  background-color: #0a9396;
-  padding: 1rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  background-color: #0a9396;
+  padding: 1rem 2rem;
+  gap: 1rem;
 }
 
+/* Logo */
 .logo {
   max-height: 60px;
+  justify-self: start;
 }
 
+/* Site Title */
+header h1 {
+  font-family: 'Lobster', cursive;
+  color: white;
+  font-size: 2rem;
+  justify-self: center;
+}
+
+/* Nav */
+nav {
+  justify-self: end;
+}
+
+/* Nav UL Flex */
 nav ul {
   list-style: none;
   display: flex;
   gap: 1rem;
 }
 
+/* Nav Links */
 nav a {
   text-decoration: none;
   color: white;
@@ -56,10 +65,11 @@ nav a.active {
   color: #001219;
 }
 
+/* Hero Section */
 .hero {
   position: relative;
   text-align: center;
-  color: white;
+  margin: 1rem 0 2rem 0;
 }
 
 .hero-img {
@@ -67,6 +77,7 @@ nav a.active {
   height: auto;
   display: block;
   filter: brightness(70%);
+  border-radius: 10px;
 }
 
 .hero-text {
@@ -74,91 +85,169 @@ nav a.active {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-.btn {
-  background-color: #ee9b00;
-  color: white;
-  padding: 0.7rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-top: 1rem;
-  display: inline-block;
-  text-decoration: none;
+.hero-text h2 {
+  font-family: 'Lobster', cursive;
+  font-size: 3rem;
+  margin-bottom: 0.3rem;
 }
 
-.btn:hover {
-  background-color: #ca6702;
+.hero-text p {
+  font-size: 1.2rem;
 }
 
-.newsletter {
-  background-color: #e9d8a6;
-  padding: 2rem;
+/* Mission Section */
+.mission {
+  background-color: white;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+.mission h2 {
+  font-family: 'Lobster', cursive;
+  color: #005f73;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
-.newsletter form {
-  margin-top: 1rem;
-}
-
-.newsletter input[type="email"] {
-  padding: 0.5rem;
-  width: 250px;
-  max-width: 80%;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-right: 0.5rem;
-}
-
-.newsletter button {
-  padding: 0.5rem 1rem;
-  background-color: #005f73;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.quote {
-  background-color: #94d2bd;
-  padding: 2rem;
-  text-align: center;
-  font-style: italic;
-  color: #001219;
-}
-
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.mission article {
+  display: flex;
+  align-items: center;
   gap: 2rem;
-  padding: 2rem;
-  background-color: #ffffff;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.info-block {
-  background-color: #fefae0;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.mission article img {
+  max-width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
+.mission article p {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #005f73;
+}
+
+/* History Section */
+#history {
+  background-color: white;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+#history h2 {
+  font-family: 'Lobster', cursive;
+  color: #005f73;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.history-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.history-wrapper article {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #005f73;
+}
+
+.history-wrapper img {
+  max-width: 350px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Adventures Section */
+.adventures {
+  background-color: white;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+.adventures h2 {
+  font-family: 'Lobster', cursive;
+  color: #005f73;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Adventure Gallery uses Flex to spread images horizontally */
+.adventure-gallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.adventure-gallery figure {
+  flex: 1 0 18%;
+  /* roughly 5 equal widths with gap */
+  margin: 0;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.adventure-gallery img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 140px;
+  display: block;
+}
+
+.adventure-gallery figcaption {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #005f73;
+}
+
+/* Footer */
 footer {
   background-color: #0a9396;
   color: white;
-  padding: 1rem;
-  text-align: center;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  gap: 1rem;
+}
+
+footer p {
+  flex: 1 1 60%;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+footer .social {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  flex: 1 1 40%;
 }
 
 footer .social a img {
   height: 30px;
-  margin: 0 0.5rem;
+  filter: brightness(100%);
   transition: transform 0.3s ease;
 }
 
@@ -166,92 +255,61 @@ footer .social a img:hover {
   transform: scale(1.1);
 }
 
-/* Contact Form & Team Section */
-.contact-info,
-.contact-form-section,
-.team {
-  padding: 2rem;
-  background-color: #fff;
-  margin: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+/* Responsive */
+
+@media (max-width: 900px) {
+  .hero-text h2 {
+    font-size: 2.4rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .mission article,
+  .history-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mission article img,
+  .history-wrapper img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .adventure-gallery {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
+  .adventure-gallery figure {
+    flex: 1 1 40%;
+    margin-bottom: 1rem;
+  }
 }
 
-.contact-form label,
-.contact-form input,
-.contact-form textarea,
-.contact-form fieldset {
-  display: block;
-  margin: 0.5rem 0;
-  width: 100%;
-}
+@media (max-width: 480px) {
+  header {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    text-align: center;
+  }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
+  header h1 {
+    justify-self: center;
+  }
 
-.contact-form button {
-  background-color: #ee9b00;
-  color: white;
-  padding: 0.7rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
+  nav {
+    justify-self: center;
+  }
 
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-  text-align: center;
-}
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-.team-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Trips Page */
-.trip-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.trip {
-  background-color: #e9d8a6;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.page-header {
-  text-align: center;
-  padding: 2rem;
-  background-color: #fefae0;
-}
-
-/* Responsive Iframe Map */
-.map-container iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
-  border-radius: 8px;
-}
-
-/* Utility Classes */
-ul {
-  padding: 0;
-}
-
-ul li {
-  list-style: none;
+  .adventure-gallery figure {
+    flex: 1 1 100%;
+  }
 }

@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="About White Water Rafting Co. - our mission, history, and adventures.">
   <meta name="author" content="Daniel Mukonda">
-  <title>About Us | White Water Rafting Co.</title>
+  <title>About Us | White Water Rafting</title>
   <link rel="stylesheet" href="styles/rafting.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +17,10 @@
 <body>
   <header>
     <img src="images/logo.png" alt="White Water Rafting Logo" class="logo">
-    <h1>White Water Rafting</h1>
     <nav>
-      <ul>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="about.html">About Us</a></li>
         <li><a href="trips.html">Trips</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -29,71 +28,54 @@
   </header>
 
   <main>
-    <!-- ✅ HERO -->
-    <div class="hero">
+    <section class="hero">
       <img src="images/hero.jpg" alt="Rafting Adventure" class="hero-img">
-      <h2>White Water Rafting Co.</h2>
-      <p>Thrilling rafting adventures with safety, fun, and breathtaking views.</p>
-    </div>
+      <h1>About Our Rafting Company</h1>
+    </section>
 
-    <!-- ✅ MISSION -->
-    <section class="mission">
+    <section class="mission-section">
       <h2>Our Mission</h2>
+      <p>Our mission is to provide the safest and most thrilling white water rafting adventures, while fostering an
+        appreciation for the outdoors.</p>
+    </section>
+
+    <section class="team-history">
+      <h2>Meet the Team</h2>
+
       <article>
+        <h3>Expert Guides</h3>
         <img src="images/guide.jpg" alt="Happy Guide">
-        <p>We bring you thrilling rafting adventures with safety, fun, and breathtaking views.</p>
+        <p>Our guide team is highly trained and passionate about rafting. With years of experience navigating the most
+          challenging rivers, they ensure every trip is exciting and safe.</p>
+      </article>
+
+      <article>
+        <h3>Our History</h3>
+        <img src="images/history.jpg" alt="Our History">
+        <p>Founded in 1995, our company has grown from a small family-run outfit into one of the most respected rafting
+          companies in the country. We've guided thousands of adventurers through unforgettable experiences.</p>
       </article>
     </section>
 
-    <!-- ✅ HISTORY -->
-    <section id="history">
-      <h2>History</h2>
-      <div class="history-wrapper">
-        <article>
-          <p>
-            Founded in 1995, White Water Rafting Co. has guided thousands of adventurers through breathtaking rapids.
-            From humble beginnings, we’ve grown into one of the most trusted rafting companies in the region.
-          </p>
-        </article>
-        <img src="images/history.jpg" alt="Our History">
-      </div>
-    </section>
-
-    <!-- ✅ ADVENTURES -->
     <section class="adventures">
-      <h2>Adventure Awaits You</h2>
+      <h2>Our Adventures</h2>
       <div class="adventure-gallery">
-        <figure>
-          <img src="images/adventure1.jpg" alt="Los Dientes del Diablo">
-          <figcaption>Los Dientes del Diablo</figcaption>
-        </figure>
-        <figure>
-          <img src="images/adventure2.jpg" alt="Big Mallard">
-          <figcaption>Big Mallard</figcaption>
-        </figure>
-        <figure>
-          <img src="images/adventure3.jpg" alt="Half Day Adventure">
-          <figcaption>Half Day Adventure</figcaption>
-        </figure>
-        <figure>
-          <img src="images/adventure4.jpg" alt="Full Day Rapids">
-          <figcaption>Full Day Rapids</figcaption>
-        </figure>
-        <figure>
-          <img src="images/adventure5.jpg" alt="Extreme Ride">
-          <figcaption>Extreme Ride</figcaption>
-        </figure>
+        <img src="images/adventure1.jpg" alt="Los Dientes del Diablo">
+        <img src="images/adventure2.jpg" alt="Big Mallard">
+        <img src="images/adventure3.jpg" alt="Half Day Adventure">
+        <img src="images/adventure4.jpg" alt="Full Day Rapids">
+        <img src="images/adventure5.jpg" alt="Extreme Ride">
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 White Water Rafting Co. | Daniel Mukonda</p>
-    <nav class="social">
+    <p>&copy; 2025 White Water Rafting | All rights reserved</p>
+    <div class="socials">
       <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
       <a href="https://twitter.com"><img src="images/twitter.png" alt="Twitter"></a>
       <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram"></a>
-    </nav>
+    </div>
   </footer>
 </body>
 
