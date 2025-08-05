@@ -1,19 +1,4 @@
-/* Global Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-  padding: 0 1rem;
-}
-
-/* Header Grid Layout */
+/* Header Grid Layout with 3 children: logo, h1, nav */
 header {
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -29,12 +14,13 @@ header {
   justify-self: start;
 }
 
-/* Site Title */
+/* Site Title in header */
 header h1 {
   font-family: 'Lobster', cursive;
   color: white;
   font-size: 2rem;
   justify-self: center;
+  margin: 0;
 }
 
 /* Nav */
@@ -65,128 +51,7 @@ nav a.active {
   color: #001219;
 }
 
-/* Hero Section */
-.hero {
-  position: relative;
-  text-align: center;
-  margin: 1rem 0 2rem 0;
-}
-
-.hero-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: brightness(70%);
-  border-radius: 10px;
-}
-
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-.hero-text h2 {
-  font-family: 'Lobster', cursive;
-  font-size: 3rem;
-  margin-bottom: 0.3rem;
-}
-
-.hero-text p {
-  font-size: 1.2rem;
-}
-
-/* Mission Section */
-.mission {
-  background-color: white;
-  padding: 1rem 2rem;
-  margin-bottom: 2rem;
-  border-radius: 10px;
-}
-
-.mission h2 {
-  font-family: 'Lobster', cursive;
-  color: #005f73;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.mission article {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.mission article img {
-  max-width: 300px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.mission article p {
-  flex: 1;
-  font-size: 1.1rem;
-  color: #005f73;
-}
-
-/* History Section */
-#history {
-  background-color: white;
-  padding: 1rem 2rem;
-  margin-bottom: 2rem;
-  border-radius: 10px;
-}
-
-#history h2 {
-  font-family: 'Lobster', cursive;
-  color: #005f73;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.history-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-
-.history-wrapper article {
-  flex: 1;
-  font-size: 1.1rem;
-  color: #005f73;
-}
-
-.history-wrapper img {
-  max-width: 350px;
-  border-radius: 10px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
 /* Adventures Section */
-.adventures {
-  background-color: white;
-  padding: 1rem 2rem;
-  margin-bottom: 2rem;
-  border-radius: 10px;
-}
-
-.adventures h2 {
-  font-family: 'Lobster', cursive;
-  color: #005f73;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-/* Adventure Gallery uses Flex to spread images horizontally */
 .adventure-gallery {
   display: flex;
   justify-content: space-between;
@@ -200,7 +65,7 @@ nav a.active {
 
 .adventure-gallery figure {
   flex: 1 0 18%;
-  /* roughly 5 equal widths with gap */
+  /* roughly 5 equal widths */
   margin: 0;
   text-align: center;
   border-radius: 10px;
@@ -255,29 +120,8 @@ footer .social a img:hover {
   transform: scale(1.1);
 }
 
-/* Responsive */
-
+/* Responsive Adjustments */
 @media (max-width: 900px) {
-  .hero-text h2 {
-    font-size: 2.4rem;
-  }
-
-  .hero-text p {
-    font-size: 1rem;
-  }
-
-  .mission article,
-  .history-wrapper {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .mission article img,
-  .history-wrapper img {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
   .adventure-gallery {
     flex-wrap: wrap;
     overflow-x: visible;
