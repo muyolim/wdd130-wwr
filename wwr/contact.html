@@ -4,98 +4,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact White Water Rafting Co. for reservations, questions, or feedback.">
+  <meta name="description" content="Contact Whitewater Rafting Adventures">
   <meta name="author" content="Daniel Mukonda">
-  <title>Contact Us | White Water Rafting Co.</title>
+  <title>Contact Us | Whitewater Rafting Adventures</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <!-- Header & nav are identical to other pages -->
+
   <header>
-    <img src="images/logo.png" alt="White Water Rafting Logo" class="logo">
-    <h1>White Water Rafting</h1>
+    <img src="images/logo.png" alt="Whitewater Rafting Adventures logo" class="logo">
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="trips.html">Trips</a></li>
-        <li><a href="contact.html" class="active">Contact Us</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section class="contact-info">
-      <h2>Contact Information</h2>
-      <p><strong>Address:</strong> 123 Rapids Road, Adventure Town, ST 45678</p>
-      <p><strong>Phone:</strong> (123) 456‑7890</p>
-      <p><strong>Email:</strong> <a href="mailto:info@raftingco.com">info@raftingco.com</a></p>
-      <!-- Embedded Google Map (no inline style) -->
-      <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=...YourMapEmbedCode..." allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
+      <h1>Contact Us</h1>
+      <p>Email: info@whitewaterrafting.com</p>
+      <p>Phone: +1 234 567 8900</p>
+      <p>Location: 123 River Rd, Adventure City, USA</p>
     </section>
 
-    <section class="team">
-      <h2>Meet Our Team</h2>
-      <div class="team-grid">
-        <figure>
-          <img src="images/employee1.jpg" alt="Guide Jane Doe">
-          <figcaption>Jane Doe – Lead Guide</figcaption>
-        </figure>
-        <figure>
-          <img src="images/employee2.jpg" alt="Guide John Smith">
-          <figcaption>John Smith – River Safety Expert</figcaption>
-        </figure>
-        <figure>
-          <img src="images/employee3.jpg" alt="Guide Emma Rose">
-          <figcaption>Emma Rose – Customer Success Lead</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="contact-form-section">
+    <section class="contact-form">
       <h2>Send Us a Message</h2>
-      <form action="#" method="post" class="contact-form">
-        <label for="name">Your Name:</label>
+      <form>
+        <label for="name">Full Name:</label>
         <input type="text" id="name" name="name" required>
 
-        <label for="email">Your Email:</label>
+        <label for="email">Email Address:</label>
         <input type="email" id="email" name="email" required>
 
-        <fieldset>
-          <legend>Purpose of Message:</legend>
-          <label><input type="radio" name="purpose" value="general" required> General Inquiry</label>
-          <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
-          <label><input type="radio" name="purpose" value="feedback"> Website Suggestion</label>
-        </fieldset>
+        <label for="purpose">Purpose of Message:</label>
+        <select id="purpose" name="purpose">
+          <option value="general">General Inquiry</option>
+          <option value="reservation">Reservation</option>
+          <option value="feedback">Feedback</option>
+        </select>
 
-        <label for="message">Your Message:</label>
+        <label for="message">Message:</label>
         <textarea id="message" name="message" rows="5" required></textarea>
 
-        <label><input type="checkbox" name="newsletter"> Please subscribe me to the monthly newsletter</label>
+        <label><input type="checkbox" name="subscribe"> Please subscribe me to the newsletter</label>
 
-        <button type="submit" class="btn-submit">Submit Message</button>
+        <button type="submit">Send Message</button>
       </form>
     </section>
 
-    <!-- ✅ Wireframe image section -->
-    <section class="wireframe-section">
-      <h2>Contact Page Wireframe</h2>
-      <img src="images/contact-wireframe.png" alt="Wireframe sketch of Contact Us page">
+    <section class="wireframe">
+      <h2>Page Wireframe</h2>
+      <p><a href="images/contact-wireframe.png" target="_blank">View the wireframe document</a></p>
+      <img src="images/contact-wireframe.png" alt="Contact Page Wireframe" style="max-width: 100%;">
     </section>
-  </main>
+    <section class="employees">
+      <h2>Meet Our Team</h2>
+      <div class="employee-grid">
+        <div class="employee">
+          <img src="images/guide.jpg" alt="Guide John Smith">
+          <p>John Smith – Lead Guide</p>
+        </div>
+        <div class="employee">
+          <img src="images/hero.jpg" alt="Guide Mike Lee">
+          <p>Mike Lee – Equipment Manager</p>
+        </div>
+        <div class="employee">
+          <img src="images/employee3.jpg" alt="Guide Sarah Brown">
+          <p>Sarah Brown – Safety Coordinator</p>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 White Water Rafting Co. | Daniel Mukonda</p>
-    <nav class="social">
-      <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
-      <a href="https://twitter.com"><img src="images/twitter.png" alt="Twitter"></a>
-      <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram"></a>
-    </nav>
-  </footer>
+
+    <footer>
+      <p>&copy; 2025 Whitewater Rafting Adventures | Daniel Mukonda</p>
+      <div class="social">
+        <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook logo"></a>
+        <a href="https://twitter.com"><img src="images/twitter.png" alt="Twitter logo"></a>
+        <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram logo"></a>
+      </div>
+    </footer>
+
 </body>
 
 </html>
